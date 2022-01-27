@@ -9,14 +9,18 @@ import { Square } from '../classes/square';
 })
 export class ShapesComponent implements OnInit {
   
-  square: Square = {
+  inputA: number = 0;
+  inputB: number = 0;
+
+  public square: Square = {
     sideA: 0,
     sideB: 0,
+    result: 0,
     getArea: function (): number {
-      return this.sideA*this.sideB;
+      return this.result = this.sideA * this.sideB;
     }
-  }
-  
+  }  
+
   constructor() { }
 
   ngOnInit(): void {

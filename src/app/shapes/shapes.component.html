@@ -1,4 +1,5 @@
 <p>shapes works!</p>
-<input type="number" [(ngModel)]="square.sideA">
-<input type="number" [(ngModel)]="square.sideB">
-<pre>{{ square.getArea }}</pre>
+<input [(ngModel)]="inputA">
+<input [(ngModel)]="inputB">
+<button (click)="square.getArea">Get Area</button>
+<h6>{{ square.result }}</h6>
