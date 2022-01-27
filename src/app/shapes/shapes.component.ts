@@ -1,6 +1,6 @@
 import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-import { Square } from '../classes/square';
+//import { Square } from '../classes/square';
 
 @Component({
   selector: 'app-shapes',
@@ -9,6 +9,7 @@ import { Square } from '../classes/square';
 })
 export class ShapesComponent implements OnInit {
   
+  /*
   inputA: number = 0;
   inputB: number = 0;
 
@@ -20,6 +21,8 @@ export class ShapesComponent implements OnInit {
       return this.result = this.sideA * this.sideB;
     }
   }  
+  */
+ 
 
   constructor() { }
 
@@ -27,3 +30,4 @@ export class ShapesComponent implements OnInit {
   }
 
 }
+
