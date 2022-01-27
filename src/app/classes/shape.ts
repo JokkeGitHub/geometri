@@ -1,5 +1,7 @@
+import { Input } from "@angular/core";
+
 class Shape {
-    sideA: number;
+    public sideA: number;
 
     constructor(sideA: number){
         this.sideA = sideA;
@@ -14,15 +16,15 @@ class Shape {
     }
 }
 
-class Square extends Shape {
+export class Square extends Shape {
 
     constructor(sideA: number){
         super(sideA);
     }
 }
 
-class Rectangle extends Shape {
-    sideB: number;
+export class Rectangle extends Shape {
+    public sideB: number;
 
     constructor(sideA: number, sideB: number){
         super(sideA);
@@ -37,9 +39,3 @@ class Rectangle extends Shape {
         return 2*(this.sideA+this.sideB);
     }
 }
-/*
-export abstract class Shape {
-    abstract sideA: number;
-    abstract sideB: number;
-}
-*/
