@@ -1,19 +1,19 @@
 <div>
     <p>Input side A for square</p>
     <input type="number" [(ngModel)]="inputA">
-    <pre>Area of square = {{squareArea | number}}</pre>
-    <pre>Circumference of square = {{ squareCircumference | number}}</pre>
+    <pre>Area of square = {{squareArea}}</pre>
+    <pre>Circumference of square = {{ squareCircumference}}</pre>
     <button (click)="calculateSquare()">Calculate Square</button>
 
     <br>
     <br>
     <br>
     <p>Input side A for rectangle</p>
-    <input type="number" [(ngModel)]="inputA">
+    <input type="number" [(ngModel)]="inputB">
     <p>Input side B for rectangle</p>
-    <input type="number" [(ngModel)]="inputA">
-    <pre>Area of square = {{squareArea | number}}</pre>
-    <pre>Circumference of square = {{ squareCircumference | number}}</pre>
-    <button (click)="calculateSquare()">Calculate Square</button>
+    <input type="number" [(ngModel)]="inputC">
+    <pre>Area of square = {{rectangleArea}}</pre>
+    <pre>Circumference of square = {{ rectangleCircumference}}</pre>
+    <button (click)="calculateRectangle()">Calculate Rectangle</button>
 
 </div>
