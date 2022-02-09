@@ -1,5 +1,7 @@
+import { getLocaleEraNames } from '@angular/common';
 import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output} from '@angular/core';
+import { Shape } from '../classes/shape';
 import { Square } from '../classes/shape';
 import { Rectangle } from '../classes/shape';
 
@@ -9,33 +11,23 @@ import { Rectangle } from '../classes/shape';
   styleUrls: ['./shapes.component.css']
 })
 export class ShapesComponent implements OnInit {
-  //const inputA: number = (document.getElementById(this.inputA) as HTMLInputElement).value;
 
-  public square: Square[];
-  public rectangle: Rectangle[];
+  inputA: number = 0;
+  squareArea: number = 0;
+
+  square: Square = new Square(this.inputA);
 
   constructor(){
-    this.square = [new Square (1)] //<HTMLInputElement>document.getElementById("inputA")).value]
-    this.rectangle = [new Rectangle(1,2)]
   }
 
   ngOnInit(): void {
   }
 
+  getArea(inputA: number){
+    
+    let area = this.square.getArea();
+    return area;
+  }
+
 }
-
-
-  /*
-  inputA: number = 0;
-  inputB: number = 0;
-
-  public square: Square = {
-    sideA: 0,
-    sideB: 0,
-    result: 0,
-    getArea: function (): number {
-      return this.result = this.sideA * this.sideB;
-    }
-  }  
-  */
  

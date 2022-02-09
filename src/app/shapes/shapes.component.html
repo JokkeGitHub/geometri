@@ -1,5 +1,10 @@
 <div>
-    <input type="number" id="inputA" name="inputA">
-    <!--<label>{{square.}}: </label>
-    <field [type]="field.type" value="{{field.value}}"></field><br><br>-->
+    <p>Input side A for square</p>
+    <input type="number" [(ngModel)]="inputA">
+    <pre>Area of square = {{ getArea(inputA) | number}}</pre> 
+    <pre>Circumference of square = {{ inputA | number}}</pre>
+    <button class="btn" id="btnSquare" (click)="getArea(inputA)" name="btnSquare" value="area">Get area</button>
+
+    <br>
+
 </div>
