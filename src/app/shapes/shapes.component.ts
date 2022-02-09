@@ -14,8 +14,12 @@ export class ShapesComponent implements OnInit {
 
   inputA: number = 0;
   squareArea: number = 0;
+  squareCircumference: number = 0;
+  square: Square = new Square(0);
 
-  square: Square = new Square(this.inputA);
+  rectangle: Rectangle = new Rectangle(0, 0);
+
+  msg:string = "";
 
   constructor(){
   }
@@ -23,10 +27,20 @@ export class ShapesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getArea(inputA: number){
-    
-    let area = this.square.getArea();
-    return area;
+  calculateSquare(){
+    this.square.sideA = this.inputA;
+    this.squareAreaFunction();
+    this.squareCircumferenceFunction();
+  }
+
+  squareAreaFunction(){
+    this.squareArea = this.square.getArea();
+    return this.squareArea;
+  }
+
+  squareCircumferenceFunction(){
+    this.squareCircumference = this.square.getCircumference();
+    return this.squareCircumference;
   }
 
 }

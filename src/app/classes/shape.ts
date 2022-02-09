@@ -1,5 +1,5 @@
 export class Shape {
-    protected sideA: number;
+    sideA: number;
 
     constructor(sideA: number){
         this.sideA = sideA;
@@ -7,13 +7,13 @@ export class Shape {
 }
 
 export class Square extends Shape {
-    
+
     constructor(sideA: number){
         super(sideA);
         this.sideA = sideA;
     }
     
-    getArea(): number {
+    getArea(){
         return this.sideA * this.sideA;
     }
 
